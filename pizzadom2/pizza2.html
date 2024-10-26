@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset= "utf-8"> 
+        <link rel="stylesheet" href="style.css">
+        <title> Pizza Order </title>
+    </head>
+
+    <body>
+    
+        <form method="post" action="https://www.50toppizza.it/50-top-europe-2024/"> 
+        <h2> <strong> Place your Pizza Order </strong></h2>
+        <hr>
+        <h4><em>Select your pizza preferences</em></h4>
+
+        <p>
+        <h3> Choose size </h3>
+
+          <label> 
+            <input type="radio" name="sizes" value="small" checked> Small
+        </label><br>
+
+        <label> 
+            <input type="radio" name="sizes" value="medium"> Medium
+        </label><br>
+
+        <label> 
+            <input type="radio" name="sizes" value="large"> Large
+        </label>
+        </p>
+        <hr>
+
+
+        <p>
+        <label> Choose your crust type </label>
+        <select name="crust"> 
+            <option selected> Original Crust </option>
+            <option> Whole Wheat Crust </option>
+            <option> Cheese Stuffed Crust </option>
+            <option> Thin Crust </option>
+            <option> Thick Crust </option>
+            <option> Gluten-Free Crust </option>
+            <option> Deep Dish </option><br>
+        </select>
+        </p>
+        <hr>
+
+
+        <p>
+        <h3> Choose your toppings </h3>
+        <label> Pepperoni
+            <input name="topping" type="checkbox" checked> 
+        </label><br>
+        <label> Mushrooms
+            <input name="topping" type="checkbox">
+        </label><br>
+        <label> Parmesan
+            <input name="topping" type="checkbox">
+        </label><br>
+        <label> Basil
+            <input name="topping" type="checkbox">
+        </label><br>
+        <label> Bacon
+            <input name="topping" type="checkbox">
+        </label><br>
+        <label> Olives
+            <input name="topping" type="checkbox">
+        </label><br>
+        <label> Ham
+            <input name="topping" type="checkbox">
+        </label><br>
+        <label> Pineapple
+            <input name="topping" type="checkbox">
+        </label><br>
+        <label> Prosciutto
+            <input name="topping" type="checkbox">
+        </label><br>
+        </p>
+        <hr>
+
+
+        <p>
+        <h3> Choose sauce </h3>
+        <label>
+          <input type="radio" name="sauces"> Tomato sauce
+      </label><br>
+      <label>
+          <input type="radio" name="sauces"> Pesto sauce
+      </label><br>
+      <label>
+        <input type="radio" name="sauces"> Alfredo
+      </label><br>
+      <label>
+          <input type="radio" name="sauces"> No sauce
+      </label><br>
+      </p>
+      <hr>
+
+
+      <p>
+        <label>Name: 
+        <input name = "name" type = "text" size = "25">
+        </label>
+      </p>
+      <p>
+        <label>Phone: 
+        <input name = "phone number" type = "tel" size="9">
+        </label>
+      </p>
+
+      <p><label> Additional requests/Notes:<br>
+        <textarea name = "notes"
+           rows = "4" cols = "36">Enter request here.</textarea>
+        </label>
+      </p>
+    <p>
+        <input type="submit" value="Confirm Order">
+        <input type="reset" value="Reset Order">
+    </p>
+
+        </form>
+    </body>
+</html>
