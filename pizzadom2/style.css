@@ -11,7 +11,7 @@ body {
 }
 
 form {
-    width: 600px;
+    width: 550px;
     margin: auto;
     background-color: #f9f9f9;
     padding: 15px;
@@ -61,6 +61,7 @@ label {
 }
 input[type="text"], input[type="tel"], textarea{
     border: 2px;
+    margin-bottom: 5px;
     border-color: #7bbd80ce;
     border-radius: 5px;
     border-style: groove;
