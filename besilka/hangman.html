@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="scripts/scripts.js" defer></script>
+        <script src="hangman.js"></script>
+        <title>Besilka</title>
+    </head>
+    <body>
+        <div class="pobedil" style="display:none;">
+            <div class="contents">
+                <img src="winner.gif" alt="You won gif">
+                <h4>Congratulations!</h4> 
+                <p>You guessed the word <strong></strong> right!</p>
+                <button class="igraj-povtorno">Play again</button>
+            </div>
+    </div>
+        <div class="izgubil" style="display:none;">
+            <div class="contents">
+                <img src="loser.gif" alt="You lost gif">
+                <h4>Game Over</h4> 
+                <p>The correct word was <strong></strong></p>
+                <button class="igraj-pak">Play again</button>
+            </div>
+        </div>
+<!--ako koristime window.alert ne moze da bide stilizirano :-[ )-->
+        <div class="igra">
+            <h1>Guess the word!</h1>
+            <ul class="zbor-display">
+              
+            </ul>
+            <h3 class="pogodoci-tekst">
+                Incorrect guesses:
+                <strong>0/5</strong>
+            </h3>
+            <div class="tastatura">
+
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

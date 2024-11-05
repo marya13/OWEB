@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: lavender;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.igra {
+    width: 850px;
+    background-color: #f9f9f9;
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+.igra h1 {
+    margin-top: 0;
+    text-align: left;
+    color: rgba(52, 31, 71, 0.827);
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.zbor-display {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.zbor-display .bukva {
+    width: 28px;
+    height: 28px; 
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid rgb(29, 12, 34); 
+    margin-bottom: 0;
+    flex-shrink: 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.zbor-display .bukva.pogodena {
+    border: none; 
+    margin-bottom: 20px;
+}
+
+.igra h3 {
+    color: rgb(57, 28, 84);
+}
+
+.igra .pogodoci-tekst strong {
+    color: rgb(190, 17, 110);
+}
+
+.tastatura button {
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    background-color: rgb(198, 163, 232);
+    color: #f9f9f9;
+    font-weight: bolder;
+    border-radius: 5px;
+    border-color: blueviolet;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.tastatura button:hover {
+    background-color: blueviolet;
+}
+
+.izgubil, .pobedil {
+    position: fixed;
+    background-color: rgba(183, 140, 181, 0.688);
+    width: 100%;
+    height: 100%;
+    display: none;  /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+}
+
+.izgubil .contents, .pobedil .contents {
+    background-color: lavender;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.izgubil h4, .pobedil h4 {
+    color: blueviolet;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.pobedil button {
+    background-color: rgba(106, 48, 161, 0.808);
+    color: #f9f9f9;
+    font-weight: 400;
+    font-size: 1.05rem; 
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    margin: 3px;
+    cursor: pointer;
+}
+.izgubil button{
+    background-color: rgba(106, 48, 161, 0.808);
+    color: #f9f9f9;
+    font-weight: 400;
+    font-size: 1.05rem; 
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    margin: 3px;
+    cursor: pointer;
+}
