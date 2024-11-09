@@ -44,46 +44,45 @@ function revealRandomLetters() {
 
     while (revealedCount < 2) {
         const randomIndex = Math.floor(Math.random() * currWord.length);
-        if (displayedWord[randomIndex] === "") {
+        
             displayedWord[randomIndex] = currWord[randomIndex];  
             revealedCount++;
-        }
+        
     }
 }
 
 function updateWordDisplay() {
     wordDisplay.innerHTML = ""; 
 
-    displayedWord.forEach(letter => {
+    for (let i = 0; i < displayedWord.length; i++) {
         const listItem = document.createElement("li");
         listItem.classList.add("bukva");
-        
-        if (letter) {
-            listItem.textContent = letter;  
-            listItem.classList.add("pogodena");  
+
+        if (displayedWord[i]) {
+            listItem.textContent = displayedWord[i];
+            listItem.classList.add("pogodena");
         } else {
-            listItem.textContent = "";  
+            listItem.textContent = "";
         }
-        
-        wordDisplay.appendChild(listItem);
-    });
+
+        wordDisplay.append(listItem); 
+    }
 }
 
 
 function handleLetterClick(clickedLetter) {
-    if (currWord.includes(clickedLetter)) {
 
-        [...currWord].forEach((letter, index) => {
-            if (letter === clickedLetter) {
-                displayedWord[index] = letter;  
-            }
-        });
+    for (let i = 0; i < currWord.length; i++) {
+        if (currWord[i] === clickedLetter) {
+            displayedWord[i] = clickedLetter;
+        }
+    }    
         updateWordDisplay();
 
         if (!displayedWord.includes("")) {
             winGame();
         }
-    } else {
+     else {
         incorrectGuesses++;
         guessCountElement.textContent = `${incorrectGuesses}/${maxGuesses}`; 
         if (incorrectGuesses >= maxGuesses) {
@@ -115,7 +114,7 @@ function setupKeyboard() {
     }
 }
 
-// Restart the game
+// Restart 
 playAgainButton1.addEventListener("click", function() {
     gameWonScreen.style.display = "none";  
     start();  
