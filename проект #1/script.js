@@ -1,6 +1,6 @@
 
     document.addEventListener('DOMContentLoaded', function() {
-        // Show home section by default
+        //Home da bide default
         var allSections = document.querySelectorAll('section');
         for(var i = 0; i < allSections.length; i++) {
             allSections[i].style.display = 'none';
@@ -11,20 +11,20 @@
             homeSection.style.display = 'block';
         }
     
-        // Handle navigation
+        // za navugacija
         var links = document.querySelectorAll('.nav-link, .dropdown-item');
         
         for(var i = 0; i < links.length; i++) {
             links[i].addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Hide all sections
+                // da ne se pokaxuvaat site delovi
                 var sections = document.querySelectorAll('section');
                 for(var j = 0; j < sections.length; j++) {
                     sections[j].style.display = 'none';
                 }
                 
-                // Show clicked section
+                // da se pojavuva samo kliknatiot del
                 var sectionId = this.getAttribute('href');
                 if(sectionId) {
                     var section = document.querySelector(sectionId);
@@ -45,7 +45,7 @@
            "price": "$4.62 million",
            "reviewLink": "https://www.caranddriver.com/news/a18735592/remembering-the-lincoln-futura-the-original-batmobile/",
            "image":"batmobile.png",
-           "likes": 0,
+           "likes": 90,
            "comments": []
 
        },
@@ -55,7 +55,7 @@
            "price": "$1.5 million",
            "reviewLink": "https://www.topgear.com/car-news/classic/james-bonds-aston-martin-db5-will-be-available-for-sale-again-2022",
            "image":"bondsdb5.png",
-           "likes": 0,
+           "likes": 1347,
            "comments": []
        },
        {
@@ -64,7 +64,7 @@
            "price": "$150,000 ",
            "reviewLink": "https://screenrant.com/ecto-1-ghostbusters-vehicle-history/",
            "image":"ecto-1.png",
-           "likes": 0,
+           "likes": 8,
            "comments": []
        },
        {
@@ -73,7 +73,7 @@
            "price": "$18 million ",
            "reviewLink": "https://www.motortrend.com/news/ferrari-250-gt-california-rare-cars/",
            "image":"ferrari250.png",
-           "likes": 0,
+           "likes": 100,
            "comments": []
        }
    ]};
@@ -109,7 +109,7 @@
         "price": "$50,000",
         "reviewLink": "https://screenrant.com/supernatural-deans-impala-history-facts/",
         "image":"chevy.png",
-        "likes": 0,
+        "likes": 666,
         "comments": []
     },
     {
@@ -118,8 +118,8 @@
         "price": "$20,000 ",
         "reviewLink": "https://screenrant.com/scooby-doo-mystery-machine-culture-history-facts/",
         "image":"scoob.png",
-        "likes": 0,
-        "comments": []
+        "likes": 13,
+        "comments": ["Jinkies!"]
     },
     {
         "model": " Honda S2000 (Suki's Car)",
@@ -127,7 +127,7 @@
         "price": "$40,000",
         "reviewLink": "https://www.motortrend.com/cars/honda/s2000/2000-fast-furious-legacy/",
         "image":"suki.png",
-        "likes": 0,
+        "likes": 26,
         "comments": [] 
     },
 
@@ -147,7 +147,7 @@
         "reviewLink": "https://www.jackery.com/blogs/knowledge/breaking-bad-rv",
         "image":"bbvan.png",
         "likes": 0,
-        "comments": []
+        "comments": ["Dali doagja so opremata?"]
     }
     
 ]};
@@ -217,19 +217,19 @@ function createGallery(items) {
         
         galleryContent.appendChild(card);
         
-        // Load existing comments
+        // postoecki komentari
         const commentsContainer = card.querySelector('.comments-container');
         item.comments.forEach((comment, commentIndex) => {
             addCommentToDOM(commentsContainer, comment, index, commentIndex);
         });
     });
     
-    // Add event listeners
+
     setupEventListeners();
 }
 
 function setupEventListeners() {
-    // Like button handler
+    //like  button
     document.querySelectorAll('.like-button').forEach(button => {
         button.addEventListener('click', (e) => {
             const index = e.target.closest('.like-button').dataset.index;
@@ -238,7 +238,7 @@ function setupEventListeners() {
         });
     });
     
-    // Comment button handler
+    //comment button
     document.querySelectorAll('.add-comment').forEach(button => {
         button.addEventListener('click', (e) => {
             const index = e.target.dataset.index;
@@ -281,7 +281,6 @@ function addCommentToDOM(container, comment, imageIndex, commentIndex) {
     container.appendChild(commentElement);
 }
 
-// Initialize gallery when document is ready
 document.addEventListener('DOMContentLoaded', () => {
     createGallery(items1);
 });
