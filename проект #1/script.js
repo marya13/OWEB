@@ -213,13 +213,13 @@ for(let k=0; k<items1.length; k++){
         buttons[i].addEventListener('click', function (e) {
             e.preventDefault();
 
-            // Hide all sections
+            // kireme
             var sections = document.querySelectorAll('section');
             for (var j = 0; j < sections.length; j++) {
                 sections[j].style.display = 'none';
             }
 
-            // Show the test drive section
+            // pokazuvame
             var testDriveSection = document.querySelector('#zakazitesvoznja');
             if (testDriveSection) {
                 testDriveSection.style.display = 'block';
