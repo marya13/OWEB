@@ -206,23 +206,28 @@ for(let k=0; k<items1.length; k++){
 }
 
  //za test drive
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-        e.preventDefault();
+ document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.btn');
+    
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function (e) {
+            e.preventDefault();
 
-        // krieme da ne se pokazuva section
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => section.style.display = 'none');
+            // Hide all sections
+            var sections = document.querySelectorAll('section');
+            for (var j = 0; j < sections.length; j++) {
+                sections[j].style.display = 'none';
+            }
 
-        // da se pojavi
-        const testDriveSection = document.querySelector('#zakazitesvoznja');
-        if (testDriveSection) {
-            testDriveSection.style.display = 'block';
-            testDriveSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
+            // Show the test drive section
+            var testDriveSection = document.querySelector('#zakazitesvoznja');
+            if (testDriveSection) {
+                testDriveSection.style.display = 'block';
+                testDriveSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
 });
-
 
 //mini instagram galerija 🤍 💖 🗑️
 
