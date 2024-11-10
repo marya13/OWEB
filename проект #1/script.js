@@ -224,7 +224,7 @@ document.querySelectorAll('.btn').forEach(btn => {
 });
 
 
-//mini instagram galerija 
+//mini instagram galerija 🤍 💖 🗑️
 
 function createGallery(items) {
     const galleryContent = document.getElementById('minigram-content');
@@ -240,7 +240,7 @@ function createGallery(items) {
                 <div class="card-body">
                     <h5 class="card-title">${item.model}</h5>
                     <button class="btn btn-outline-primary btn-sm like-button" data-index="${index}">
-                        ${item.liked ? '❤️' : '🤍'} <span class="like-count">${item.likes}</span>
+                        ${item.liked ? '💖' : '🤍'} <span class="like-count">${item.likes}</span>
                     </button>
                     <div class="comments-section mt-3">
                         <div class="comments-container"></div>
@@ -284,7 +284,7 @@ function createGallery(items) {
                 items1[index].liked = true;
                 this.classList.remove('btn-outline-primary');
                 this.classList.add('btn-primary');
-                this.innerHTML = `❤️ <span class="like-count">${items1[index].likes}</span>`;
+                this.innerHTML = `💖 <span class="like-count">${items1[index].likes}</span>`;
             }
         });
     }
@@ -325,7 +325,7 @@ function addCommentToDOM(container, comment, imageIndex, commentIndex) {
         <span class="comment-text">${comment}</span>
         <button class="btn btn-outline-danger btn-sm delete-comment" 
             data-image="${imageIndex}" 
-            data-comment="${commentIndex}">×</button>
+            data-comment="${commentIndex}">🗑️</button>
     `;
     
     // brishenje komentari
