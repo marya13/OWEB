@@ -1,5 +1,5 @@
 
-    document.addEventListener('DOMContentLoaded', function() {
+    window.onload = function() {
         //Home da bide default
         var allSections = document.querySelectorAll('section');
         for(var i = 0; i < allSections.length; i++) {
@@ -34,7 +34,7 @@
                 }
             });
         }
-    });
+    };
 
     //prevzemanje info za Luxury Hollywood Replicas
 
