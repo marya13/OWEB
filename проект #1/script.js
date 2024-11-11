@@ -1,24 +1,24 @@
 
     window.onload = function() {
-        //Home da bide default
-        var allSections = document.querySelectorAll('section');
+        //Ostanatite gi krieme
+        var allSections = document.querySelectorAll('section'); // go sleektira prviot element na koj naiduva (pr new-cars)
         for(var i = 0; i < allSections.length; i++) {
             allSections[i].style.display = 'none';
         }
-        
+        //Home da bide default
         var homeSection = document.querySelector('#home');
         if(homeSection) {
             homeSection.style.display = 'block';
         }
     
-        // za navugacija
+        // za navigacija
         var links = document.querySelectorAll('.nav-link, .dropdown-item');
         
         for(var i = 0; i < links.length; i++) {
             links[i].addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // da ne se pokaxuvaat site delovi
+                // da ne se pokazuvaat site delovi
                 var sections = document.querySelectorAll('section');
                 for(var j = 0; j < sections.length; j++) {
                     sections[j].style.display = 'none';
@@ -279,14 +279,14 @@ function createGallery(items) {
             if (items1[index].liked) {
                 // ako e like-nata da se un-like-ne
                 items1[index].likes--;
-                items1[index].liked = false;
+              //  items1[index].liked = false;
                 this.classList.remove('btn-primary');
                 this.classList.add('btn-outline-primary');
                 this.innerHTML = `🤍 <span class="like-count">${items1[index].likes}</span>`;
             } else {
                 // prv like ili ako se predomislil
                 items1[index].likes++;
-                items1[index].liked = true;
+               // items1[index].liked = true;
                 this.classList.remove('btn-outline-primary');
                 this.classList.add('btn-primary');
                 this.innerHTML = `💖 <span class="like-count">${items1[index].likes}</span>`;
@@ -302,7 +302,7 @@ function setupCommentEventListeners() {
     var commentButtons = document.querySelectorAll('.add-comment');
     
     for (var i = 0; i < commentButtons.length; i++) {
-        commentButtons[i].addEventListener('click', function() {
+            commentButtons[i].addEventListener('click', function() {
             var index = this.dataset.index;
             var card = this.closest('.card');
             var input = card.querySelector('.comment-input');
@@ -338,7 +338,7 @@ function addCommentToDOM(container, comment, imageIndex, commentIndex) {
     deleteButton.addEventListener('click', function() {
         var imageIndex = this.dataset.image;
         var commentIndex = this.dataset.comment;
-        items1[imageIndex].comments.splice(commentIndex, 1);
+        items1[imageIndex].comments.splice(commentIndex, 1); 
         commentElement.remove();
     });
     
