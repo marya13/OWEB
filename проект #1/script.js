@@ -279,14 +279,14 @@ function createGallery(items) {
             if (items1[index].liked) {
                 // ako e like-nata da se un-like-ne
                 items1[index].likes--;
-              //  items1[index].liked = false;
+                items1[index].liked = false;
                 this.classList.remove('btn-primary');
                 this.classList.add('btn-outline-primary');
                 this.innerHTML = `🤍 <span class="like-count">${items1[index].likes}</span>`;
             } else {
                 // prv like ili ako se predomislil
                 items1[index].likes++;
-               // items1[index].liked = true;
+                items1[index].liked = true;
                 this.classList.remove('btn-outline-primary');
                 this.classList.add('btn-primary');
                 this.innerHTML = `💖 <span class="like-count">${items1[index].likes}</span>`;
