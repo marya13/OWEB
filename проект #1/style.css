@@ -30,7 +30,7 @@ h2 {
     padding-left: 50px;
 }
 h3 {
-    color: rgb(10, 20, 7);
+    color: rgb(187, 205, 181);
     font-style: italic;
     padding: 30px;
     padding-right: 50px;
@@ -179,16 +179,25 @@ nav a:hover {
     color: white;
 
 }
-
+  
 .into-content {
     flex-direction: column;
 
 }
-.intro h1{
+.intro, .about-us h1{
     color: beige;
 
 }
 
+.about-us {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.825), rgba(0, 0, 0, 0.879)), url('intropic.PNG');
+    background-size:contain;
+    background-position: center;
+    text-align: center;
+    height: 80vh;
+    color: white;
+    padding: 30px;
+}
 .footer {
     padding: 5px;
     margin-top: auto;
