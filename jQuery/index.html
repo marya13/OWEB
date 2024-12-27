@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Filters</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <h2>Filterable Table</h2>
+  <p>Type something in the input fields to search the table for first names, last names, or emails:</p>  
+  
+  <div>
+    <label>Search by First Name:</label>
+    <input id="firstNameSearch" type="text" placeholder="Search by First Name">
+    
+    <label>Search by Last Name:</label>
+    <input id="lastNameSearch" type="text" placeholder="Search by Last Name">
+    
+    <label>Search by Email:</label>
+    <input id="emailSearch" type="text" placeholder="Search by Email">
+  </div>
+  
+  <br>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="first-name">First Name</th>
+        <th class="last-name">Last Name</th>
+        <th class="email">Email</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td class="first-name">John</td>
+        <td class="last-name">Doe</td>
+        <td class="email">john@example.com</td>
+      </tr>
+      <tr>
+        <td class="first-name">Mary</td>
+        <td class="last-name">Moe</td>
+        <td class="email">mary@mail.com</td>
+      </tr>  
+      <tr>
+        <td class="first-name">July</td>
+        <td class="last-name">Dooley</td>
+        <td class="email">july@greatstuff.com</td>
+      </tr>
+      <tr>
+        <td class="first-name">Anja</td>
+        <td class="last-name">Ravendale</td>
+        <td class="email">a_r@test.com</td>
+      </tr>
+
+    </tbody>
+  </table>
+  
+
+</body>
+</html>
