@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    background-color: #3d3d3d; 
+  }
+  
+  .is-odd {
+    color: #b8b7b7; 
+    font-weight: bold;
+  }
+  
+  .is-even {
+    color: #04aadd; 
+    font-weight: bold;
+  }
+  
+  .is-first {
+    color: #e50202; 
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .is-last {
+    color: #FFD700; 
+    text-decoration: underline;
+  }
+  
+  button {
+    background-color: #D40000; 
+    color: #FFFFFF; 
+    border: 2px solid #F7D300; 
+    border-radius: 6px;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #F7D300; 
+    transform: scale(1.05); 
+  }
+
+  
