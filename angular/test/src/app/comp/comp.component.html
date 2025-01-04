@@ -1,18 +1,44 @@
-<div>
-    <div>
-        {{indeks+". "+ vozac?.name}}
+<div *ngIf="vozac?.name != undefined" [ngClass]="klasi()">
+    <div role="heading" aria-level="2">
+        {{indeks + ". " + vozac?.name}}
     </div>
-    <img width="300" [src]="vozac?.iconUrl">
+
+    <img width="300" *ngIf="vozac?.iconUrl" [src]="vozac?.iconUrl" alt="Slika od {{vozac?.name}}">
+    <ng-template role="alert" aria-live="polite" #noImg>Slika</ng-template>
 </div>
-<div>
+
+<div aria-label="Team">
     {{vozac?.team}}
 </div>
-<div>
-<div>
-    &nbsp;
-</div>
+
+<div [ngSwitch]="vozac?.category" aria-label="Category">
+    <div *ngSwitchCase="'EXPERT'">Expert</div>
+    <div *ngSwitchCase="'LUNATIC'">Lunatic</div>
+    <div *ngSwitchCase="'ASD'">Asd</div>
+    <div *ngSwitchDefault>Unknown category</div>
 </div>
 
 <div>
-    <button (click)="onDrvView()"> click me please</button>
+    <button (click)="onDrvView()" class="btn" aria-label="View image of driver ">Click me</button>
+</div>
+
+<br><br>
+
+<div *ngIf="vozac?.name != undefined" [ngClass]="klasi()" [ngStyle]="stil()" role="region" 
+    [attr.aria-labelledby]="'driver-name' + indeks" [attr.aria-describedby]="'driver-db-torka' + indeks">
+
+    <div aria-level="2" role="heading">{{indeks?.toString()}}<br>{{vozac?.name}}</div>
+
+    <img role="img" width="300" *ngIf="vozac?.iconUrl" [src]="vozac?.iconUrl" [alt]="'Slika od ' + vozac?.name">
+    
+    <div>{{vozac?.team}}</div>
+
+    <div [ngSwitch]="vozac?.category" aria-label="Driver Category">
+        <div *ngSwitchCase="'EXPERT'">Expert</div>
+        <div *ngSwitchCase="'LUNATIC'">Lunatic</div>
+        <div *ngSwitchCase="'ASD'">Asd</div>
+        <div *ngSwitchDefault>Nope</div>
+    </div>
+
+    <button role="button" aria-label="Open image of driver" (click)="onDrvView()">View Image</button>
 </div>

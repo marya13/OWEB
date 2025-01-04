@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 
+
 export class AppComponent {
 klikni() {
 window.alert("got you again");
