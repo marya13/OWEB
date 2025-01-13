@@ -1,0 +1,26 @@
+
+<main>
+  <img id="title" src="titlepic.PNG" alt="Caterpillar">
+  <div id="game">
+
+    <img 
+        id="apple" 
+        src="apple.png"  
+        alt="Apple"
+        [style]="{top: apple.y + 'px', left: apple.x + 'px'}"
+    />
+  <div *ngFor="let block of snake; index as i; odd as nep; even as par"> 
+    <div 
+        class="block" 
+        [class.odd-block]="nep"
+        [class.even-block]="par"
+        [style]="{top: block.y + 'px', left: block.x + 'px'}"
+    ></div>
+  </div>      
+  </div>
+<h1>{{message}}</h1>
+<h2>Score: {{points}}</h2>
+<button *ngIf="!playing" (click)="resetGame()">Play Again</button>
+</main>
+<!--<router-outlet /> -->
+
