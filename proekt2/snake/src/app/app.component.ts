@@ -140,6 +140,7 @@ export class AppComponent {
   this.apple = { x: 0, y: 0};
   this.direction = Direction.RIGHT;
   this.playing = true;
+  this.points= 0;
 
   this.placeApple();
 }
