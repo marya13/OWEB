@@ -29,6 +29,7 @@ const GAME_HEIGHT = 15;
 const WIDTH = GAME_WIDTH * DELTA;
 const HEIGHT = GAME_HEIGHT * DELTA;
 
+
 @Component({
   selector: 'app-root',
   imports: [CommonModule],
@@ -47,6 +48,7 @@ export class AppComponent {
            {x: 120, y: 280}];
 
   direction: Direction = Direction.RIGHT;
+  nextDirection: Direction = Direction.RIGHT;
   playing = true;
   message = '';
   points = 0;
@@ -58,6 +60,7 @@ export class AppComponent {
       if(!this.playing) {
         return;
       }
+      this.direction = this.nextDirection
       const size = this.snake.length
       for (let i = 0; i < size - 1; i++ ) {
         this.snake[i].x = this.snake[i + 1].x;
@@ -145,29 +148,24 @@ export class AppComponent {
   this.placeApple();
 }
   @HostListener('window:keyup', ['$event'])
-  keyEvent(event: KeyboardEvent){
-
-  switch (event.code) {
-    case KEY_CODE.UP_ARROW:
-      if(this.direction === Direction.DOWN) break;
-      this.direction = Direction.UP;
-      break;
-    case KEY_CODE.DOWN_ARROW:
-      if(this.direction === Direction.UP) break;
-      this.direction = Direction.DOWN;
-      break;
-    case KEY_CODE.RIGHT_ARROW:
-      if(this.direction === Direction.LEFT) break;
-      this.direction = Direction.RIGHT;
-      break;
-    case KEY_CODE.LEFT_ARROW:
-      if(this.direction === Direction.RIGHT) break;
-      this.direction = Direction.LEFT;
-      break;
+  keyEvent(event: KeyboardEvent) {
+    switch (event.code) {
+      case KEY_CODE.UP_ARROW:
+        if (this.direction !== Direction.DOWN) this.nextDirection = Direction.UP;
+        break;
+      case KEY_CODE.DOWN_ARROW:
+        if (this.direction !== Direction.UP) this.nextDirection = Direction.DOWN;
+        break;
+      case KEY_CODE.RIGHT_ARROW:
+        if (this.direction !== Direction.LEFT) this.nextDirection = Direction.RIGHT;
+        break;
+      case KEY_CODE.LEFT_ARROW:
+        if (this.direction !== Direction.RIGHT) this.nextDirection = Direction.LEFT;
+        break;
+      default:
+        break;
+    }
+  }
   
-    default:
-      break;
-  }
-  }
 }
 
